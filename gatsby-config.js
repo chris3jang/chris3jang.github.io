@@ -1,3 +1,3 @@
 module.exports = {
-  pathPrefix: "/chris3jang/chris3jang.github.io",
+  pathPrefix: "/chris3jang.github.io",
 }
