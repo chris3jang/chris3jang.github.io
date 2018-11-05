@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 import profpic from './../../public/static/profpic.jpg'
 
 import allist from './../../public/static/ALListProject.png'
+import uttt from './../../public/static/uttt.png'
 
 import reacticon from './../../public/static/ReactIcon.png'
 import nodejsicon from './../../public/static/NodeJsIcon.png'
@@ -13,6 +14,8 @@ import css3icon from './../../public/static/CSS3Icon.png'
 import webpackicon from './../../public/static/WebpackIcon.png'
 import passportjsicon from './../../public/static/PassportJsIcon.png'
 import jwticon from './../../public/static/JWTIcon.png'
+import socketioicon from './../../public/static/socketioicon.png'
+import transimage from './../../public/static/transimage.png'
 
 
 
@@ -20,128 +23,130 @@ import githubicon from './../../public/static/GitHubIcon.png'
 import linkedinicon from './../../public/static/LinkedInIcon.png'
 import gmailicon from './../../public/static/GmailIcon.png'
 
+import favi from './../../public/static/favi.png'
+
 
 const IndexPage = () => (
 
   <div>
-  	<img src={profpic} style={
-    	{ height: 120, 
-    		width: 'auto', 
-    		display: 'block', 
-    		marginLeft: 'auto', 
-    		marginRight: 'auto'}
-    	}>
-	</img>
-	<div style={{textAlign: 'center'}}>
-		<nav>
-			<a href={'#'} 
-        onClick={(e) => {
-          e.preventDefault(); 
-          document.getElementById('projects').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
-        }} 
-        style={{paddingLeft: 80, paddingRight: 80, fontFamily: 'verdana'}}>Projects
-      </a>
-			<a href={'#'} 
-        onClick={(e) => {
-          e.preventDefault(); 
-          document.getElementById('contact').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
-        }} 
-        style={{paddingLeft: 80, paddingRight: 80, fontFamily: 'verdana'}}>Contact
-      </a>
-		</nav>
-	</div>
-
-	<section style={{ marginTop: 60, marginBottom: 60 }}>
-    <div style={{ textAlign: 'center', backgroundColor: 'red' }}>
-      <h1 style={{ fontFamily: 'verdana'}}>My name is Chris Jang.  I'm a web developer based in Brooklyn, New York.</h1>
-    </div>
-  </section>
-
-  <section>
-
-
-
-
-
+    <img src={favi} style={
+      { height: 'auto', 
+        width: '60px', 
+        display: 'block', 
+        position: 'fixed', 
+        marginTop: '10',
+        marginLeft: '10', 
+        marginRight: 'auto'}
+      }>
+    </img>
 
     <div>
-      <h1 id={'projects'} style={{ fontFamily: 'verdana' }}>Projects</h1>
-        <div id={'sidewaysProjectContainer'} 
-          style={{ 
-            display: 'grid', 
-            width: '100%', height: 500, 
-            backgroundColor: '#EDEDED',
-            gridTemplateColumns: '5% 43% 4% 43% 5%',
-            gridTemplateRows: '12% 62% 13% 12%'
-          }}>
-          <div style={{ boxShadow: '0px 0px 18px', gridColumn: '2/3', gridRow: '2/4', borderRadius: '4px 4px 4px 4px'  }}>
-            <div style={{ gridColumn: '2/3', gridRow: '2/3', 
-              display: 'grid' }}>
-                <img style={
-                  { gridRow: '2/3',
-                    width: '100%', 
-                    height: 'auto',
-                    borderRadius: '4px 4px 0px 0px' }}
-                  src={allist}>
-                </img>
-            </div>
-            <div style={{ gridColumn: '2/3', gridRow: '3/4', textAlign: 'center', fontFamily: 'verdana' }}>
-              <h2>ALList</h2>
-            </div>
-          </div>
-          <div style={{ gridColumn: '4/5', gridRow: '2/4' }}>
-            <div style={{ backgroundColor: '#EDEDED' }}>
-              <p style={{ fontFamily: 'verdana'}}>ALList is a personalized CRUD list-making app for documenting practical and arbitrary data.  Features a recursive subcategorizing functionality that popular list apps lack.  Built on the MERN stack with Passport.js and JWT for user auth.</p>
-              <div style={{ display: 'block' }}>
-                <img src={reacticon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-                <img src={nodejsicon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-                <img src={css3icon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-                <img src={expressicon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-              </div>
-              <div style={{ display: 'block' }}>
-                <img src={webpackicon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-                <img src={passportjsicon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-                <img src={jwticon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-                <img src={mongodbicon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-              </div>
-            </div>
-          </div>
+      <section style={{ marginTop: 10, marginLeft: 150, marginBottom: 28 }}>
+        <div style={{height: 80}}></div>
+        <div style={{ textAlign: 'left', fontFamily: 'verdana' }}>
+          <h1 style={{ fontSize: 50}}>Thanks for stopping by.</h1>
+          <h1 style={{ marginLeft: 30}}>My name is Chris Jang.</h1>
+          <h1 style={{ marginLeft: 30}}>I'm a web developer based in NYC.</h1>
         </div>
-        <div style={{ height: 40}}></div>
+        <div style={{ height: 30}}></div>
+      	<div style={{textAlign: 'left', marginLeft: 30}}>
+      		<nav>
+      			<a href={'#'} 
+              onClick={(e) => {
+                e.preventDefault(); 
+                document.getElementById('projects').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+              }} 
+              style={{paddingTop: 5, paddingBottom: 5, paddingLeft: 20, paddingRight: 20, fontFamily: 'verdana', backgroundColor: 'black', color: 'white', textDecoration: 'none', borderRadius: 2}}>Projects
+            </a>
+            <div style={{display: 'inline-block', width: 40}}></div>
+      			<a href={'#'} 
+              onClick={(e) => {
+                e.preventDefault(); 
+                document.getElementById('contact').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+              }} 
+              style={{paddingTop: 5, paddingBottom: 5, paddingLeft: 20, paddingRight: 20, fontFamily: 'verdana', backgroundColor: 'black', color: 'white', textDecoration: 'none', borderRadius: 2}}>Contact
+            </a>
+      		</nav>
+      	</div>
+      </section>
+    </div>
+    <div style={{ height: 120}}></div>
+  	
 
-
-
-
-
-
-
-
-        <div id={'verticalProjectsContainer'} style={{ display: 'block', textAlign: 'center' }}>
-          <div style={{ display: 'inline-block', boxShadow: '0px 0px 18px', borderRadius: 5, backgroundColor: '#EDEDED', verticalAlign: 'top', margin: '20px' }}>
-            <div style={{ display: 'block', width: 450/*42vw*/, margin: 'auto' }}>
+    <section id={'projects'} style={{backgroundColor: '#f5f5f5', zIndex: -2}}>
+      <div style={{ height: 30}}></div>
+      <h1 style={{marginLeft: 150, fontFamily: 'verdana' }}>Projects</h1>
+      <div style={{ height: 15}}></div>
+      <div id={'verticalProjectsContainer'} style={{ display: 'block', textAlign: 'center', marginLeft: 80 }}>
+        <div style={{ display: 'inline-block', boxShadow: '0 2px 3px hsla(0,0%,71.4%,.5)', borderRadius: 5, backgroundColor: 'white', verticalAlign: 'top', margin: '5px' }}>
+          <div style={{ display: 'block', width: 450/*42vw*/, margin: 'auto' }}>
+            <a href={"https://allist.herokuapp.com/"}>
               <img style={
                 { width: '100%', 
                   height: 'auto',
                   borderRadius: '5px 5px 0px 0px' }}
                 src={allist}>
               </img>
+            </a>
+          </div>
+          <div style={{ display: 'block', height: 120/*'20vh'*/, 
+            backgroundColor: '#f5f5f5', 
+            borderRadius: '0px 0px 5px 5px' }}>
+            <h4 style={{ width: '30vw' , margin: 'auto' }}></h4>
+            <div style={{ backgroundColor: '#f5f5f5' }}>
+              <div style={{height: 40}}></div>
+              <div style={{ display: 'block' }}>
+                <img src={reacticon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
+                <img src={nodejsicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
+                <img src={expressicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
+                <img src={mongodbicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
+                <img src={css3icon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
+                <img src={webpackicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
+                <img src={passportjsicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
+                <img src={jwticon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={
+          { display: 'inline-block', 
+            verticalAlign: 'top',
+            width: 450, 
+            height: 377.13,
+            borderRadius: 5,
+            boxShadow: '0 2px 3px hsla(0,0%,71.4%,.5)',
+            backgroundColor: 'white',
+            margin: '5px'}}>
+          <div style={{display: 'table-cell', padding: '90px 15px', verticalAlign: 'center', fontFamily: 'verdana'}}>
+            <h1>ALList</h1>
+            <p>ALList is a personalized CRUD list-making app for documenting practical and arbitrary data.  Features a recursive subcategorizing functionality that popular list apps lack.  Built on the MERN stack with Passport.js and JWT for user auth.</p>
+          </div>
+        </div>
+      </div>
+      <div style={{height: 80}}></div>
+      <div style={{ display: 'block', textAlign: 'center' }}>
+        <div id={'verticalProjectsContainer'} style={{ display: 'block', textAlign: 'center', marginLeft: 80 }}>
+          <div style={{ display: 'inline-block', boxShadow: '0 2px 3px hsla(0,0%,71.4%,.5)', borderRadius: 5, backgroundColor: 'white', verticalAlign: 'top', margin: '5px' }}>
+            <div style={{ display: 'block', width: 450/*42vw*/, margin: 'auto' }}>
+              <img style={
+                { width: '100%', 
+                  height: 'auto',
+                  borderRadius: '5px 5px 0px 0px' }}
+                src={uttt}>
+              </img>
             </div>
             <div style={{ display: 'block', height: 120/*'20vh'*/, 
-              //backgroundColor: '#EDEDED', 
+              backgroundColor: '#f5f5f5', 
               borderRadius: '0px 0px 5px 5px' }}>
-              <h4 style={{ width: '30vw' , borderTop: '1px solid grey', margin: 'auto' }}></h4>
-              <div style={{ backgroundColor: '#EDEDED' }}>
+              <h4 style={{ width: '30vw' , margin: 'auto' }}></h4>
+              <div style={{ backgroundColor: '#f5f5f5' }}>
+                <div style={{height: 40}}></div>
                 <div style={{ display: 'block' }}>
-                  <img src={reacticon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-                  <img src={nodejsicon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-                  <img src={css3icon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-                  <img src={expressicon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-                </div>
-                <div style={{ display: 'block' }}>
-                  <img src={webpackicon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-                  <img src={passportjsicon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-                  <img src={jwticon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
-                  <img src={mongodbicon} style={{ height: 50, width: 'auto', display: 'inline-block'}}></img>
+                  <img src={reacticon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
+                  <img src={nodejsicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
+                  <img src={expressicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
+                  <img src={css3icon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
+                  <img src={socketioicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
                 </div>
               </div>
             </div>
@@ -150,52 +155,29 @@ const IndexPage = () => (
             { display: 'inline-block', 
               verticalAlign: 'top',
               width: 450, 
-              height: 408.64,
+              height: 377.13,
               borderRadius: 5,
-              boxShadow: '0px 0px 18px',
-              backgroundColor: '#EDEDED',
-              margin: '20px'}}>
+              boxShadow: '0 2px 3px hsla(0,0%,71.4%,.5)',
+              backgroundColor: 'white',
+              margin: '5px'}}>
+            <div style={{display: 'table-cell', padding: '90px 15px', verticalAlign: 'center', fontFamily: 'verdana'}}>
+              <h1>UTTT</h1>
+              <p>UTTT is an implementation for the classic Ultimate Tic Tac Toe board game, built with React.js for mulitplayer games both locally in a single browser or in online real time from separate browsers using Socket.io.</p>
+            </div>
           </div>
         </div>
-        <div style={{ display: 'block', textAlign: 'center' }}>
-          <div style={
-            { display: 'inline-block', 
-              verticalAlign: 'top',
-              width: 500, 
-              height: 440.27,
-              borderRadius: 5,
-              boxShadow: '0px 0px 18px',
-              backgroundColor: '#EDEDED',
-              margin: '20px 0px' }}>
-          </div>
-          <div style={{ width: 48/*'5vw'*/, display: 'inline-block' }}></div>
-          <div style={
-            { display: 'inline-block', 
-              verticalAlign: 'top',
-              width: 500, 
-              height: 440.27,
-              borderRadius: 5,
-              boxShadow: '0px 0px 18px',
-              backgroundColor: '#EDEDED',
-              margin: '20px 0px'}}>
-          </div>
-        </div>
-    </div>
-  </section>
+        <div style={{height:90}}></div>
+      </div>
+    </section>
 
-  <section>
-    <div>
-      <h1 id={'contact'} style={{ fontFamily: 'verdana' }}>Contact</h1>
-    </div>
-  </section>
-
-  <section>
-    <div style={{ position: 'absolute', left: 0, width: '100%', padding: '5vh 0', backgroundColor: '#727272', textAlign: 'center' }}>
-      <a href={"https://www.github.com/chris3jang"}><img style={{ height: 50, width: 'auto', margin: '0 20px' }}src={githubicon}></img></a>
-      <a href={"https://www.linkedin.com/in/chris3jang"}><img style={{ height: 50, width: 'auto', margin: '0 20px' }}src={linkedinicon}></img></a>
-      <a href={"mailto:chris3jang@gmail.com"}><img style={{ height: 50, width: 'auto', margin: '0 20px' }}src={gmailicon}></img></a>
-    </div>
-  </section>
+    <section>
+      <div style={{ position: 'absolute', left: 0, width: '100%', padding: '5vh 0', backgroundColor: '#727272', textAlign: 'center' }}>
+        <h1 id={'contact'} style={{ fontFamily: 'verdana', color: 'white' }}>Contact</h1>
+        <a href={"https://www.github.com/chris3jang"}><img style={{ height: 50, width: 'auto', margin: '0 20px' }}src={githubicon}></img></a>
+        <a href={"mailto:chris3jang@gmail.com"}><img style={{ height: 50, width: 'auto', margin: '0 20px' }}src={gmailicon}></img></a>
+        <a href={"https://www.linkedin.com/in/chris3jang"}><img style={{ height: 50, width: 'auto', margin: '0 20px' }}src={linkedinicon}></img></a>
+      </div>
+    </section>
 
   </div>
 )
