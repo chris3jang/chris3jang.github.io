@@ -14,7 +14,7 @@ import css3icon from './../../public/static/CSS3Icon.png'
 import webpackicon from './../../public/static/WebpackIcon.png'
 import passportjsicon from './../../public/static/PassportJsIcon.png'
 import jwticon from './../../public/static/JWTIcon.png'
-import socketioicon from './../../public/static/socketioicon.png'
+import socketioicon from './../../public/static/Socketioicon.png'
 import transimage from './../../public/static/transimage.png'
 
 
