@@ -15,7 +15,9 @@ import webpackicon from './../../public/static/WebpackIcon.png'
 import passportjsicon from './../../public/static/PassportJsIcon.png'
 import jwticon from './../../public/static/JWTIcon.png'
 import socketioicon from './../../public/static/Socketioicon.png'
+
 import transimage from './../../public/static/transimage.png'
+import transimagebw from './../../public/static/transimageblackwhite.png'
 
 
 
@@ -25,154 +27,117 @@ import gmailicon from './../../public/static/GmailIcon.png'
 
 import favi from './../../public/static/favi.png'
 
+import indexStyles from "../styles/index.module.css"
+import './portfolio.css';
+
+import Project from './project.js'
+import '../styles/index.module.css'
+
+import resume from './../../public/static/resume.pdf'
+
 
 const IndexPage = () => (
 
   <div>
-    <img src={favi} style={
-      { height: 'auto', 
-        width: '60px', 
-        display: 'block', 
-        position: 'fixed', 
-        marginTop: '10',
-        marginLeft: '10', 
-        marginRight: 'auto'}
-      }>
-    </img>
-
-    <div>
-      <section style={{ marginTop: 10, marginLeft: 150, marginBottom: 28 }}>
-        <div style={{height: 80}}></div>
-        <div style={{ textAlign: 'left', fontFamily: 'verdana' }}>
+    <section style={{ 
+        backgroundImage: `url(${transimagebw})`,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        width: '100%',
+        height: 700, 
+        boxShadow: 'inset 0 0 0 1000px rgba(42,135,208, .7)',
+        position: 'relative',
+        display: 'block'
+    }}>
+      <section>
+        <div style={{ textAlign: 'center', fontFamily: 'arimo', color: 'white', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }}>
           <h1 style={{ fontSize: 50}}>Thanks for stopping by.</h1>
-          <h1 style={{ marginLeft: 30}}>My name is Chris Jang.</h1>
-          <h1 style={{ marginLeft: 30}}>I'm a web developer based in NYC.</h1>
-        </div>
-        <div style={{ height: 30}}></div>
-      	<div style={{textAlign: 'left', marginLeft: 30}}>
-      		<nav>
-      			<a href={'#'} 
+          <h1 style={{}}>My name is Chris Jang.</h1>
+          <h1 style={{}}>I'm a web developer based in NYC.</h1>
+          <div style={{ height: 30}}></div>
+          <nav>
+            <a href={'#'} 
               onClick={(e) => {
                 e.preventDefault(); 
                 document.getElementById('projects').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
               }} 
-              style={{paddingTop: 5, paddingBottom: 5, paddingLeft: 20, paddingRight: 20, fontFamily: 'verdana', backgroundColor: 'black', color: 'white', textDecoration: 'none', borderRadius: 2}}>Projects
+              style={{paddingTop: 5, paddingBottom: 5, paddingLeft: 20, paddingRight: 20, fontFamily: 'arimo', backgroundColor: 'white', color: 'rgba(42,135,208)', textDecoration: 'none', borderRadius: 2}}>PROJECTS
             </a>
             <div style={{display: 'inline-block', width: 40}}></div>
-      			<a href={'#'} 
+            <a href={resume} style={{paddingTop: 5, paddingBottom: 5, paddingLeft: 20, paddingRight: 20, fontFamily: 'arimo', backgroundColor: 'white', color: 'rgba(42,135,208)', textDecoration: 'none', borderRadius: 2}}>RESUME</a>
+            <div style={{display: 'inline-block', width: 40}}></div>
+            <a href={'#'} 
               onClick={(e) => {
                 e.preventDefault(); 
                 document.getElementById('contact').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
               }} 
-              style={{paddingTop: 5, paddingBottom: 5, paddingLeft: 20, paddingRight: 20, fontFamily: 'verdana', backgroundColor: 'black', color: 'white', textDecoration: 'none', borderRadius: 2}}>Contact
+              style={{paddingTop: 5, paddingBottom: 5, paddingLeft: 20, paddingRight: 20, fontFamily: 'arimo', backgroundColor: 'white', color: 'rgba(42,135,208)', textDecoration: 'none', borderRadius: 2}}>CONTACT
             </a>
-      		</nav>
-      	</div>
+          </nav>
+        </div>
       </section>
-    </div>
-    <div style={{ height: 120}}></div>
-  	
-
-    <section id={'projects'} style={{backgroundColor: '#f5f5f5', zIndex: -2}}>
-      <div style={{ height: 30}}></div>
-      <h1 style={{marginLeft: 150, fontFamily: 'verdana' }}>Projects</h1>
-      <div style={{ height: 15}}></div>
-      <div id={'verticalProjectsContainer'} style={{ display: 'block', textAlign: 'center', marginLeft: 80 }}>
-        <div style={{ display: 'inline-block', boxShadow: '0 2px 3px hsla(0,0%,71.4%,.5)', borderRadius: 5, backgroundColor: 'white', verticalAlign: 'top', margin: '5px' }}>
-          <div style={{ display: 'block', width: 450/*42vw*/, margin: 'auto' }}>
-            <a href={"https://allist.herokuapp.com/"}>
-              <img style={
-                { width: '100%', 
-                  height: 'auto',
-                  borderRadius: '5px 5px 0px 0px' }}
-                src={allist}>
-              </img>
-            </a>
-          </div>
-          <div style={{ display: 'block', height: 120/*'20vh'*/, 
-            backgroundColor: '#f5f5f5', 
-            borderRadius: '0px 0px 5px 5px' }}>
-            <h4 style={{ width: '30vw' , margin: 'auto' }}></h4>
-            <div style={{ backgroundColor: '#f5f5f5' }}>
-              <div style={{height: 40}}></div>
-              <div style={{ display: 'block' }}>
-                <img src={reacticon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
-                <img src={nodejsicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
-                <img src={expressicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
-                <img src={mongodbicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
-                <img src={css3icon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
-                <img src={webpackicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
-                <img src={passportjsicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
-                <img src={jwticon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style={
-          { display: 'inline-block', 
-            verticalAlign: 'top',
-            width: 450, 
-            height: 377.13,
-            borderRadius: 5,
-            boxShadow: '0 2px 3px hsla(0,0%,71.4%,.5)',
-            backgroundColor: 'white',
-            margin: '5px'}}>
-          <div style={{display: 'table-cell', padding: '90px 15px', verticalAlign: 'center', fontFamily: 'verdana'}}>
-            <h1>ALList</h1>
-            <p>ALList is a personalized CRUD list-making app for documenting practical and arbitrary data.  Features a recursive subcategorizing functionality that popular list apps lack.  Built on the MERN stack with Passport.js and JWT for user auth.</p>
-          </div>
-        </div>
-      </div>
-      <div style={{height: 80}}></div>
-      <div style={{ display: 'block', textAlign: 'center' }}>
-        <div id={'verticalProjectsContainer'} style={{ display: 'block', textAlign: 'center', marginLeft: 80 }}>
-          <div style={{ display: 'inline-block', boxShadow: '0 2px 3px hsla(0,0%,71.4%,.5)', borderRadius: 5, backgroundColor: 'white', verticalAlign: 'top', margin: '5px' }}>
-            <div style={{ display: 'block', width: 450/*42vw*/, margin: 'auto' }}>
-              <img style={
-                { width: '100%', 
-                  height: 'auto',
-                  borderRadius: '5px 5px 0px 0px' }}
-                src={uttt}>
-              </img>
-            </div>
-            <div style={{ display: 'block', height: 120/*'20vh'*/, 
-              backgroundColor: '#f5f5f5', 
-              borderRadius: '0px 0px 5px 5px' }}>
-              <h4 style={{ width: '30vw' , margin: 'auto' }}></h4>
-              <div style={{ backgroundColor: '#f5f5f5' }}>
-                <div style={{height: 40}}></div>
-                <div style={{ display: 'block' }}>
-                  <img src={reacticon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
-                  <img src={nodejsicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
-                  <img src={expressicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
-                  <img src={css3icon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
-                  <img src={socketioicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style={
-            { display: 'inline-block', 
-              verticalAlign: 'top',
-              width: 450, 
-              height: 377.13,
-              borderRadius: 5,
-              boxShadow: '0 2px 3px hsla(0,0%,71.4%,.5)',
-              backgroundColor: 'white',
-              margin: '5px'}}>
-            <div style={{display: 'table-cell', padding: '90px 15px', verticalAlign: 'center', fontFamily: 'verdana'}}>
-              <h1>UTTT</h1>
-              <p>UTTT is an implementation for the classic Ultimate Tic Tac Toe board game, built with React.js for mulitplayer games both locally in a single browser or in online real time from separate browsers using Socket.io.</p>
-            </div>
-          </div>
-        </div>
-        <div style={{height:90}}></div>
-      </div>
     </section>
 
+    <section id={'projects'} style={{backgroundColor: 'white', zIndex: -2}}>
+      <h1 className={indexStyles.heading}>PROJECTS</h1>
+      <div className={indexStyles.projects}>
+        <div className={indexStyles.proj}>
+          <div className={indexStyles.projCard}>
+            <div className={indexStyles.imgContainer}>
+              <div className={indexStyles.overlay}></div>
+              <div className={indexStyles.buttonsContainer}>
+                <a className={indexStyles.overlayButton} href={"https://allist.herokuapp.com/"}>Live</a>
+                <a className={indexStyles.overlayButton} href={"https://github.com/chris3jang/allist"}>Github</a>
+              </div>
+              <img className={indexStyles.projImg} src={allist}></img>
+            </div>
+            <div>
+              <ul className={indexStyles.flexContainer}>
+                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={reacticon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={nodejsicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={expressicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={mongodbicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={css3icon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={webpackicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={passportjsicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={jwticon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+              </ul>
+              <p style={{fontFamily: 'arimo', padding: 10}}>ALList is a personalized CRUD list-making app for documenting practical and arbitrary data.  Features a recursive subcategorizing functionality that popular list apps lack.  Built on the MERN stack with Passport.js and JWT for user auth.</p>
+            </div>
+          </div>
+        </div>
+        <div className={indexStyles.proj}>
+          <div className={indexStyles.projCard}>
+            <div className={indexStyles.imgContainer}>
+              <div className={indexStyles.overlay}></div>
+              <div className={indexStyles.buttonsContainer}>
+                <a className={indexStyles.overlayButton} href={"https://ulttitato.herokuapp.com/"}>Live</a>
+                <a className={indexStyles.overlayButton} href={"https://github.com/chris3jang/UTTT"}>Github</a>
+              </div>
+              <img className={indexStyles.projImg} src={uttt}></img>
+            </div>
+            <div>
+              <ul className={indexStyles.flexContainer}>
+                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={reacticon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={nodejsicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={expressicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={css3icon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={socketioicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+              </ul>
+              <p style={{fontFamily: 'arimo', padding: 10}}>UTTT is an implementation for the classic Ultimate Tic Tac Toe board game, built with React.js for mulitplayer games both locally in a single browser or in online real time from separate browsers using Socket.io.</p>
+            </div>
+          </div>  
+        </div>
+      </div>
+
+    </section>
+
+
     <section>
-      <div style={{ position: 'absolute', left: 0, width: '100%', padding: '5vh 0', backgroundColor: '#727272', textAlign: 'center' }}>
-        <h1 id={'contact'} style={{ fontFamily: 'verdana', color: 'white' }}>Contact</h1>
+      <div style={{ position: 'absolute', left: 0, width: '100%', padding: '0 0 5vh 0', backgroundColor: 'rgba(42,135,208)', textAlign: 'center' }}>
+        <h1 id={'contact'} style={{ fontFamily: 'arimo', color: 'white' }}>Contact</h1>
         <a href={"https://www.github.com/chris3jang"}><img style={{ height: 50, width: 'auto', margin: '0 20px' }}src={githubicon}></img></a>
         <a href={"mailto:chris3jang@gmail.com"}><img style={{ height: 50, width: 'auto', margin: '0 20px' }}src={gmailicon}></img></a>
         <a href={"https://www.linkedin.com/in/chris3jang"}><img style={{ height: 50, width: 'auto', margin: '0 20px' }}src={linkedinicon}></img></a>
@@ -190,4 +155,13 @@ export default IndexPage
 <p>Welcome to your new Gatsby site.</p>
 <p>Now go build something great.</p>
 <Link to="/page-2/">Go to page 2</Link>
+
+<section>
+      <div style={{position: 'relative'}}>
+        <div style={{position: 'absolute', width: '100%', height: '100%', backgroundColor: 'rgba(42,135,208)', zIndex: 1, opacity: .5}}></div>
+        <img src={transimage} style={{width: '100%', verticalAlign: 'top', filter: 'grayscale(1)', position: 'fixed'}}></img>
+      </div>
+    </section>
+
+
 */
