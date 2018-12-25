@@ -10,7 +10,9 @@ import reacticon from './../../public/static/ReactIcon.png'
 import nodejsicon from './../../public/static/NodeJsIcon.png'
 import expressicon from './../../public/static/ExpressIcon.png'
 import mongodbicon from './../../public/static/MongoDbIcon.png'
-import css3icon from './../../public/static/CSS3Icon.png'
+//import css3icon from './../../public/static/CSS3Icon.png'
+import css3icon from './CSS3Icon.png'
+
 import webpackicon from './../../public/static/WebpackIcon.png'
 import passportjsicon from './../../public/static/PassportJsIcon.png'
 import jwticon from './../../public/static/JWTIcon.png'
@@ -57,23 +59,21 @@ const IndexPage = () => (
           <h1 style={{}}>My name is Chris Jang.</h1>
           <h1 style={{}}>I'm a web developer based in NYC.</h1>
           <div style={{ height: 30}}></div>
-          <nav>
+          <nav className={indexStyles.navigation}>
             <a href={'#'} 
               onClick={(e) => {
                 e.preventDefault(); 
                 document.getElementById('projects').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
               }} 
-              style={{paddingTop: 5, paddingBottom: 5, paddingLeft: 20, paddingRight: 20, fontFamily: 'arimo', backgroundColor: 'white', color: 'rgba(42,135,208)', textDecoration: 'none', borderRadius: 2}}>PROJECTS
+              className={indexStyles.navButton}>PROJECTS
             </a>
-            <div style={{display: 'inline-block', width: 40}}></div>
-            <a href={resume} style={{paddingTop: 5, paddingBottom: 5, paddingLeft: 20, paddingRight: 20, fontFamily: 'arimo', backgroundColor: 'white', color: 'rgba(42,135,208)', textDecoration: 'none', borderRadius: 2}}>RESUME</a>
-            <div style={{display: 'inline-block', width: 40}}></div>
+            <a href={resume} className={indexStyles.navButton}>RESUME</a>
             <a href={'#'} 
               onClick={(e) => {
                 e.preventDefault(); 
                 document.getElementById('contact').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
               }} 
-              style={{paddingTop: 5, paddingBottom: 5, paddingLeft: 20, paddingRight: 20, fontFamily: 'arimo', backgroundColor: 'white', color: 'rgba(42,135,208)', textDecoration: 'none', borderRadius: 2}}>CONTACT
+              className={indexStyles.navButton}>CONTACT
             </a>
           </nav>
         </div>

@@ -127,3 +127,42 @@
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
+
+.navigation {
+}
+
+.navButton {
+	padding-top: 5px; 
+	padding-bottom: 5px; 
+	padding-left: 20px; 
+	padding-right: 20px; 
+	font-family: arimo; 
+	background-color: white;
+	color: rgba(42,135,208); 
+	text-decoration: none; 
+	border-radius: 2px;
+	margin-left: 20px;
+	margin-right: 20px;
+
+	@media screen and (max-width: 64rem) {
+		display: inline-block;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		width: 150px;
+	}
+}
+
+.navButton:first-child {
+	margin-left: 0px;
+	@media screen and (max-width: 64rem) {
+		margin-left: 20px;
+		width: 150px;
+	}
+}
+
+.navButton:last-child {
+	margin-right: 0px;
+	@media screen and (max-width: 64rem) {
+		margin-right: 20px;
+	}
+}
