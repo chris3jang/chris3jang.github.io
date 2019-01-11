@@ -166,3 +166,23 @@
 		margin-right: 20px;
 	}
 }
+
+.footer {
+	position: absolute; 
+	left: 0; 
+	width: 100%; 
+	padding: 0 0 5vh 0; 
+	background-color: rgba(42,135,208); 
+	text-align: center;
+}
+
+li {
+	display: inline-block;
+	list-style: none;
+}
+
+li img {
+	height: 40px; 
+	width: auto; 
+	display: inline-block;
+}

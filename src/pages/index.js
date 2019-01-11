@@ -95,14 +95,14 @@ const IndexPage = () => (
             </div>
             <div>
               <ul className={indexStyles.flexContainer}>
-                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={reacticon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
-                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={nodejsicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
-                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={expressicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
-                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={mongodbicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
-                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={css3icon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
-                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={webpackicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
-                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={passportjsicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
-                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={jwticon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+                <li><img src={reacticon}></img></li>
+                <li><img src={nodejsicon}></img></li>
+                <li><img src={expressicon}></img></li>
+                <li><img src={mongodbicon}></img></li>
+                <li><img src={css3icon}></img></li>
+                <li><img src={webpackicon}></img></li>
+                <li><img src={passportjsicon}></img></li>
+                <li><img src={jwticon}></img></li>
               </ul>
               <p style={{fontFamily: 'arimo', padding: 10}}>ALList is a personalized CRUD list-making app for documenting practical and arbitrary data.  Features a recursive subcategorizing functionality that popular list apps lack.  Built on the MERN stack with Passport.js and JWT for user auth.</p>
             </div>
@@ -120,11 +120,11 @@ const IndexPage = () => (
             </div>
             <div>
               <ul className={indexStyles.flexContainer}>
-                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={reacticon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
-                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={nodejsicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
-                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={expressicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
-                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={css3icon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
-                <li style={{listStyle: 'none', display: 'inline-block'}}><img src={socketioicon} style={{ height: 40, width: 'auto', display: 'inline-block'}}></img></li>
+                <li><img src={reacticon}></img></li>
+                <li><img src={nodejsicon}></img></li>
+                <li><img src={expressicon}></img></li>
+                <li><img src={css3icon}></img></li>
+                <li><img src={socketioicon}></img></li>
               </ul>
               <p style={{fontFamily: 'arimo', padding: 10}}>UTTT is an implementation for the classic Ultimate Tic Tac Toe board game, built with React.js for mulitplayer games both locally in a single browser or in online real time from separate browsers using Socket.io.</p>
             </div>
@@ -136,7 +136,7 @@ const IndexPage = () => (
 
 
     <section>
-      <div style={{ position: 'absolute', left: 0, width: '100%', padding: '0 0 5vh 0', backgroundColor: 'rgba(42,135,208)', textAlign: 'center' }}>
+      <div className={indexStyles.footer}>
         <h1 id={'contact'} style={{ fontFamily: 'arimo', color: 'white' }}>Contact</h1>
         <a href={"https://www.github.com/chris3jang"}><img style={{ height: 50, width: 'auto', margin: '0 20px' }}src={githubicon}></img></a>
         <a href={"mailto:chris3jang@gmail.com"}><img style={{ height: 50, width: 'auto', margin: '0 20px' }}src={gmailicon}></img></a>
