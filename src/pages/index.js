@@ -1,7 +1,8 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
 import profpic from './../../public/static/profpic.jpg'
+
+import transimagebw from './../../public/static/transimageblackwhite.png'
 
 import allist from './../../public/static/ALListProject.png'
 import uttt from './../../public/static/uttt.png'
@@ -10,18 +11,11 @@ import reacticon from './../../public/static/ReactIcon.png'
 import nodejsicon from './../../public/static/NodeJsIcon.png'
 import expressicon from './../../public/static/ExpressIcon.png'
 import mongodbicon from './../../public/static/MongoDbIcon.png'
-//import css3icon from './../../public/static/CSS3Icon.png'
-import css3icon from './CSS3Icon.png'
-
+import css3icon from './../../CSS3Icon.png'
 import webpackicon from './../../public/static/WebpackIcon.png'
 import passportjsicon from './../../public/static/PassportJsIcon.png'
 import jwticon from './../../public/static/JWTIcon.png'
 import socketioicon from './../../public/static/Socketioicon.png'
-
-import transimage from './../../public/static/transimage.png'
-import transimagebw from './../../public/static/transimageblackwhite.png'
-
-
 
 import githubicon from './../../public/static/GitHubIcon.png'
 import linkedinicon from './../../public/static/LinkedInIcon.png'
@@ -148,20 +142,3 @@ const IndexPage = () => (
 )
 
 export default IndexPage
-
-
-/*
-<h1>Hi people</h1>
-<p>Welcome to your new Gatsby site.</p>
-<p>Now go build something great.</p>
-<Link to="/page-2/">Go to page 2</Link>
-
-<section>
-      <div style={{position: 'relative'}}>
-        <div style={{position: 'absolute', width: '100%', height: '100%', backgroundColor: 'rgba(42,135,208)', zIndex: 1, opacity: .5}}></div>
-        <img src={transimage} style={{width: '100%', verticalAlign: 'top', filter: 'grayscale(1)', position: 'fixed'}}></img>
-      </div>
-    </section>
-
-
-*/
